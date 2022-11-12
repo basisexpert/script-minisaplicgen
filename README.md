@@ -38,6 +38,7 @@ Set parameters to generate license:
 export MINSAPLICTYPE=025
 export MINSAPLICHWKEY=$(su - a4hadm -c "saplicense -get | grep -i hardware | tr -d '[:space:]' | sed 's/.*=//'")
 export MINSAPLICEMAIL=blablabla@blablabla.io
+```
 
 Generate license:
 
