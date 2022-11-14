@@ -1,6 +1,6 @@
 #!/bin/bash
 
-(set -o pipefail && python3 minisaplicgen.py | xpath -q -e '/entry/content/m:properties/d:Licensekey/text()')<<EOF
+(set -o pipefail && python3 $(dirname $0)/minisaplicgen.py | xpath -q -e '/entry/content/m:properties/d:Licensekey/text()')<<EOF
 {
     "Type": "$MINSAPLICTYPE",
     "Name": "${MINSAPLICEMAIL:=blablabla}",
